@@ -113,7 +113,7 @@ public class Login extends Activity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(Login.this, "로그인이 실패합니다!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Login.this, "로그인에 실패하였습니다!", Toast.LENGTH_LONG).show();
                     }
                 }
         ){
