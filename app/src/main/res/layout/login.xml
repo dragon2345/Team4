@@ -101,7 +101,7 @@
         android:gravity="center"
         >
         <TextView
-            android:id="@+id/buttonRegister"
+            android:id="@+id/btnRegister"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:text="Register"
@@ -112,7 +112,7 @@
             android:gravity="center"
             />
         <TextView
-            android:id="@+id/buttonFindPassword"
+            android:id="@+id/btnFindPassword"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:text="Forgot Password?"

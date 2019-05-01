@@ -27,6 +27,7 @@ public class Login extends Activity {
     private TextView textAppName, textLogin, textResult;
     private EditText editTextUsername, editTextPassword;
     private Button btnLogin;
+    private TextView btnRegister, btnFindPassword;
 
     String urlLogin = "http://203.234.62.86/mucon/login.php";
 
@@ -52,6 +53,8 @@ public class Login extends Activity {
         editTextPassword.setText("");
 
         btnLogin = findViewById(R.id.btnLogin);
+        btnRegister = findViewById(R.id.btnRegister);
+        btnFindPassword = findViewById(R.id.btnFindPassword);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +70,20 @@ public class Login extends Activity {
                 }else{
                     Login(urlLogin);
                 }
+            }
+        });
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this, Register.class));
+            }
+        });
+
+        btnFindPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this, FindPassword.class));
             }
         });
     }

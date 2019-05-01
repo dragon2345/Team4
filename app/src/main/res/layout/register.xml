@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/input_shape"
             android:hint="Username"
             android:padding="15dp"
@@ -84,14 +84,13 @@
             android:textSize="16dp" />
 
         <EditText
-            android:id="@+id/editTextYourName"
+            android:id="@+id/editTextYourNameRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/input_shape"
             android:hint="Your Name"
-            android:inputType="textPassword"
             android:padding="15dp"
             android:singleLine="true"
             android:textColor="@color/blue"
@@ -105,7 +104,6 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/input_shape"
             android:hint="email"
-            android:inputType="textPassword"
             android:padding="15dp"
             android:singleLine="true"
             android:textColor="@color/blue"
@@ -122,6 +120,39 @@
             android:text="Join"
             android:textColor="#FFFFFF"
             android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/btnLoginRegister"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="#6A8DD8"
+            android:padding="5px"
+            android:layout_centerHorizontal="true"
+            android:textSize="18dp"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/btnFindPasswordRegister"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="#6A8DD8"
+            android:padding="5px"
+            android:layout_centerHorizontal="true"
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            />
     </LinearLayout>
 
 
