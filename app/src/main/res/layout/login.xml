@@ -38,11 +38,24 @@
             android:textStyle="bold"
             android:textSize="80dp"/>
 
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:textColor="#b63438"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textSize="18dp"
+            />
+
         <EditText
             android:id="@+id/editTextUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/input_shape"
             android:padding="15dp"
@@ -51,8 +64,9 @@
             android:textColor="@color/blue"
             android:singleLine="true"
             />
+
         <EditText
-            android:id="@+id/textTextPassword"
+            android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -66,7 +80,7 @@
             android:inputType="textPassword"
             />
             <Button
-                android:id="@+id/buttonLogin"
+                android:id="@+id/btnLogin"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_shape"
@@ -75,7 +89,7 @@
                 android:textColor="#FFFFFF"
                 android:padding="5px"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="25dp"
                 />
     </LinearLayout>
     <LinearLayout
