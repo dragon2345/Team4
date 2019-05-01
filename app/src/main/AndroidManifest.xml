@@ -19,6 +19,10 @@
         </activity>
 
         <activity android:name=".FindPassword">
+
+        </activity>
+
+        <activity android:name=".Register">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
