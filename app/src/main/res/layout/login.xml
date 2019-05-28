@@ -51,6 +51,7 @@
             android:textSize="18dp"
             />
 
+
         <EditText
             android:id="@+id/editTextUsername"
             android:layout_width="match_parent"

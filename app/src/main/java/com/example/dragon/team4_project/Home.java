@@ -1,6 +1,7 @@
 package com.example.dragon.team4_project;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,13 @@ public class Home extends Activity {
         setContentView(R.layout.home);
         findViewById();
         setTypeface();
+
+        btnMyMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,MusicPlay.class));
+            }
+        });
     }
 
     private void findViewById(){
