@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textviewtitlelist"
+        android:gravity="center"
+        android:text="List"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="#692b12"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/listviewplaylist"
+        android:layout_below="@id/textviewtitlelist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+    <TextView
+        android:layout_below="@id/listviewplaylist"
+        android:text="See more list"
+        android:textSize="18sp"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/iconmoreplaylist"
+        android:paddingLeft="5dp"
+        android:id="@+id/textviewmorelist"
+        android:background="#e2d0d0"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#7d6c3614"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

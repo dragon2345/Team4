@@ -152,7 +152,7 @@ public class MusicPlay extends AppCompatActivity {
     private void AddSong() {
         arraySong = new ArrayList<>();
         arraySong.add(new Song("Stay", "http://203.234.62.86/MusicApp/Stay.mp3"));
-        arraySong.add(new Song("불장잔", "http://203.234.62.86/MusicApp/Playingwithfire.mp3"));
+        arraySong.add(new Song("불장난", "http://203.234.62.86/MusicApp/Playingwithfire.mp3"));
         arraySong.add(new Song("봄바야", "http://203.234.62.86/MusicApp/Boombayah.mp3"));
     }
 

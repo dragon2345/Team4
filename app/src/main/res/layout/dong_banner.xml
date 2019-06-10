@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/imageviewbackgroundbanner"
+        android:background="@drawable/background_banner1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_alignTop="@id/imageviewbackgroundbanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="New Question"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="#f2f4ef"
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textviewquestiontitle"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Title"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#f2f4ef"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textviewquestioncontent"
+            android:maxLines="2"
+            android:padding="3dp"
+            android:textColor="#f2f4ef"
+            android:textSize="15dp"
+            android:text="This is my love song. Can you talk me this song name?"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/textviewquestiontitle"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/textviewquestionusername"
+        android:gravity="right"
+        android:padding="3dp"
+        android:textColor="#f2f4ef"
+        android:textSize="15dp"
+        android:text="dragon4397"
+        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@+id/imageviewbackgroundbanner"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

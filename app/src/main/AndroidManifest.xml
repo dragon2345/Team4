@@ -19,10 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity.ListActivity" />
+        <activity android:name=".Home" />
         <activity android:name=".FindPassword" />
         <activity android:name=".Register" />
-        <activity android:name=".Home" />
-        <activity android:name=".MusicPlay">
+        <activity android:name=".MusicPlay" />
+        <activity android:name=".Activity.Main">
 
         </activity>
     </application>

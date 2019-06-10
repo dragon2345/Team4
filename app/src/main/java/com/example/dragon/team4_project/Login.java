@@ -2,10 +2,8 @@ package com.example.dragon.team4_project;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.dragon.team4_project.Activity.Main;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -69,6 +68,7 @@ public class Login extends Activity {
                     editTextPassword.setHint("password 입력하세요!");
                 }else{
                     Login(urlLogin);
+
                 }
             }
         });
@@ -104,7 +104,7 @@ public class Login extends Activity {
                     @Override
                     public void onResponse(String response) {
                         if(response.trim().equals("success")){
-                            startActivity(new Intent(Login.this, Home.class));
+                            startActivity(new Intent(Login.this, Main.class));
                         }else if(response.trim().equals("error")){
                             textResult.setText("계정의 정보가 안 맞습니다!");
                         }
