@@ -121,6 +121,13 @@
                 android:layout_height="wrap_content"
                 android:text="Rec"
                 android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnStopRec"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Stop"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <!-- progress bar -->
@@ -182,6 +189,12 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="Play"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/btnPausePlay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="pause"
                 android:textSize="14sp" />
         </LinearLayout>
 
