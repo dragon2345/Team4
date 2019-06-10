@@ -22,9 +22,12 @@
         <activity android:name=".FindPassword" />
         <activity android:name=".Register" />
         <activity android:name=".Home" />
-        <activity android:name=".MusicPlay">
+        <activity android:name=".MusicPlay" >
+
 
         </activity>
     </application>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
 </manifest>
