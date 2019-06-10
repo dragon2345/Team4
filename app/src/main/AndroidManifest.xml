@@ -3,6 +3,8 @@
     package="com.example.dragon.team4_project">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -20,11 +22,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".FindPassword" />
+        <activity android:name=".AddQuestion"/>
+        <activity android:name=".Question_spinner"/>
         <activity android:name=".Register" />
-        <activity android:name=".Home" />
-        <activity android:name=".MusicPlay">
-
+        <activity android:name=".MusicPlay"></activity>
+        <activity android:name=".Activity.Main">
         </activity>
+        <activity android:name=".Activity.ListActivity"></activity>
     </application>
-
 </manifest>

@@ -1,35 +1,22 @@
 package com.example.dragon.team4_project;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.ContentValues;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
-import android.os.Message;
-import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.SeekBar;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 
-public class Question extends Activity {
+public class AddQuestion extends Activity {
     MediaRecorder recorder;
     String filename;
 
@@ -39,7 +26,7 @@ public class Question extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.question);
+        setContentView(R.layout.addquestion);
 
         permissionCheck();
 
@@ -48,14 +35,14 @@ public class Question extends Activity {
         filename = file.getAbsolutePath();
         Log.d("Question", "저장할 파일 명 : " + filename);
 
-        findViewById(R.id.btnStartPlay).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnStartPlayAddQuestion).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 playAudio();
             }
         });
 
-        findViewById(R.id.btnPausePlay).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnPausePlayAddQuestion).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 pauseAudio();
@@ -63,14 +50,14 @@ public class Question extends Activity {
         });
 
 
-        findViewById(R.id.btnStartRec).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnStartRecAddQuestion).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 recordAudio();
             }
         });
 
-        findViewById(R.id.btnStopRec).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnStopRecAddQuestion).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 stopRecording();

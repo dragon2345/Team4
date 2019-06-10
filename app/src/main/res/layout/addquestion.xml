@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textAppNameAddQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="73dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="MUCON"
+        android:textSize="60dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="594dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <Spinner
+            android:id="@+id/spinner2AddQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/category"/>
+
+
+        <EditText
+            android:id="@+id/editTexttitleAddQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_shape"
+            android:hint="제목"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textColor="@color/blue"
+            android:textSize="16dp" />
+
+
+        <EditText
+            android:id="@+id/editTextcontentAddQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_shape"
+            android:hint="내용"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textColor="@color/blue"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical" >
+
+            <SeekBar
+                android:id="@+id/recProgressBarAddQuestion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:max="60000"
+                android:padding="10dp"
+                android:progress="0" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvRecStartPointAddQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical|left"
+                    android:text="00:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvRecMaxPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical|right"
+                    android:text="01:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnStartRecAddQuestion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Rec"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnStopRecAddQuestion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Stop"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- progress bar -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical" >
+
+            <SeekBar
+                android:id="@+id/playProgressBarAddQuestion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:max="60000"
+                android:padding="10dp"
+                android:progress="0" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvPlayStartPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical|left"
+                    android:text="00:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvPlayMaxPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical|right"
+                    android:text="01:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnStartPlayAddQuestion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Play"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/btnPausePlayAddQuestion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="pause"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnUploadAddQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="등록" />
+    </LinearLayout>
+</LinearLayout>

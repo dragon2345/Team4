@@ -4,15 +4,31 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
+    <Button
+        android:id="@+id/textviewupload"
+        android:background="@drawable/button_shape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="질문하기"
+        android:textColor="#e7ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/textviewtitlelist"
-        android:gravity="center"
-        android:text="List"
+        android:text="장르"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:textColor="#692b12"
-        android:layout_marginTop="10dp"
+        android:textColor="#700aaf"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

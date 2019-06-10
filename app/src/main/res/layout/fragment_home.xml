@@ -17,23 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/textviewupload"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/fragmentbanner"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="3dp"
-            android:background="#6c3333"
-            android:drawablePadding="10dp"
-            android:gravity="center"
-            android:paddingLeft="5dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="녹음"
-            android:textColor="#7de1cfc3"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+
         <fragment
             android:name="com.example.dragon.team4_project.Fragment.Fragment_List"
             android:id="@+id/fragmentlist"

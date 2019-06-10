@@ -16,8 +16,10 @@ import android.widget.TextView;
 
 import com.example.dragon.team4_project.Activity.ListActivity;
 import com.example.dragon.team4_project.Adapter.PlaylistAdapter;
+import com.example.dragon.team4_project.AddQuestion;
 import com.example.dragon.team4_project.Model.PlayList;
 import com.example.dragon.team4_project.R;
+import com.example.dragon.team4_project.Register;
 import com.example.dragon.team4_project.Service.APIService;
 import com.example.dragon.team4_project.Service.Dataservice;
 
@@ -33,6 +35,8 @@ public class Fragment_List extends Fragment {
     ListView playlist;
     TextView txttitlelistview, txtviewlistview;
     PlaylistAdapter playlistAdapter;
+    TextView textviewaddquestion;
+
 
     ArrayList<PlayList> list_array;
 
@@ -43,6 +47,15 @@ public class Fragment_List extends Fragment {
         playlist = view.findViewById(R.id.listviewplaylist);
         txttitlelistview = view.findViewById(R.id.textviewtitlelist);
         txtviewlistview = view.findViewById(R.id.textviewmorelist);
+
+        textviewaddquestion = view.findViewById(R.id.textviewupload);
+        textviewaddquestion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AddQuestion.class);
+                startActivity(intent);
+            }
+        });
 
         GetData();
         return view;
