@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category">
+        <item >알앤비(R&amp;B)</item>
+        <item >댄스(Dance)</item>
+        <item >발라드(Ballad)</item>
+        <item >힙합(Hip-Hop)</item>
+    </string-array>
+
+</resources>
