@@ -37,11 +37,11 @@
             <ImageView
                 android:elevation="6dp"
                 android:layout_marginTop="38dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="70dp"
                 android:id="@+id/imageviewlistview"
                 android:layout_gravity="center"
-                android:layout_width="200dp"
-                android:layout_height="200dp" />
+                android:layout_width="180dp"
+                android:layout_height="180dp" />
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
     <android.support.design.widget.FloatingActionButton
@@ -49,7 +49,7 @@
         app:fabSize="normal"
         android:scaleType="fitXY"
         android:src="@drawable/iconfloatingactionbutton"
-        android:backgroundTint="#8bb8e2"
+        android:backgroundTint="#9d7fc2"
         app:layout_anchorGravity="bottom|center"
         app:layout_anchor="@id/appbarlayout"
         app:layout_behavior="@string/bottom_sheet_behavior"
@@ -57,8 +57,10 @@
         android:layout_height="wrap_content" />
 
     <android.support.v4.widget.NestedScrollView
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="0dp"
+        android:paddingTop="30dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="#e6dbd1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <android.support.v7.widget.RecyclerView

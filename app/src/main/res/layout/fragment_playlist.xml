@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center">
 
@@ -11,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="3dp"
         android:layout_marginRight="10dp"
         android:gravity="center"
         android:padding="3dp"
@@ -25,9 +25,8 @@
         android:text="장르"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:textColor="#700aaf"
+        android:textColor="#ae5627"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -41,19 +40,19 @@
     </ListView>
 
     <TextView
+        android:id="@+id/textviewmorelist"
         android:layout_below="@id/listviewplaylist"
         android:text="See more list"
         android:textSize="18sp"
         android:drawablePadding="10dp"
         android:drawableLeft="@drawable/iconmoreplaylist"
         android:paddingLeft="5dp"
-        android:id="@+id/textviewmorelist"
-        android:background="#e2d0d0"
+        android:background="#c18168"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="10dp"
-        android:textColor="#7d6c3614"
+        android:textColor="#ebf4f2ef"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

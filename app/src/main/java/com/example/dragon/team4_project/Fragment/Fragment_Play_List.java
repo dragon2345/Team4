@@ -15,11 +15,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.dragon.team4_project.Activity.ListActivity;
+import com.example.dragon.team4_project.Activity.MorePlayListActivity;
 import com.example.dragon.team4_project.Adapter.PlaylistAdapter;
 import com.example.dragon.team4_project.AddQuestion;
 import com.example.dragon.team4_project.Model.PlayList;
 import com.example.dragon.team4_project.R;
-import com.example.dragon.team4_project.Register;
 import com.example.dragon.team4_project.Service.APIService;
 import com.example.dragon.team4_project.Service.Dataservice;
 
@@ -30,10 +30,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Fragment_List extends Fragment {
+public class Fragment_Play_List extends Fragment {
     View view;
     ListView playlist;
-    TextView txttitlelistview, txtviewlistview;
+    TextView txttitlelistview, txtviewmorelistview;
     PlaylistAdapter playlistAdapter;
     TextView textviewaddquestion;
 
@@ -43,10 +43,10 @@ public class Fragment_List extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_list, container, false);
+        view = inflater.inflate(R.layout.fragment_playlist, container, false);
         playlist = view.findViewById(R.id.listviewplaylist);
         txttitlelistview = view.findViewById(R.id.textviewtitlelist);
-        txtviewlistview = view.findViewById(R.id.textviewmorelist);
+        txtviewmorelistview = view.findViewById(R.id.textviewmorelist);
 
         textviewaddquestion = view.findViewById(R.id.textviewupload);
         textviewaddquestion.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +56,16 @@ public class Fragment_List extends Fragment {
                 startActivity(intent);
             }
         });
+
+
+        txtviewmorelistview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(getActivity(), MorePlayListActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         GetData();
         return view;

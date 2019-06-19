@@ -1,7 +1,9 @@
 package com.example.dragon.team4_project;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +35,8 @@ public class Login extends Activity {
     public static final String KOREAN_FONT = "font/koreanfont1.TTF";
     public static final String KOREAN_FONT_2 = "font/koreanfont2.TTF";
     public static final String ENGLISH_FONT = "font/englishfont1.TTF";
+
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +108,10 @@ public class Login extends Activity {
                     @Override
                     public void onResponse(String response) {
                         if(response.trim().equals("success")){
+                            sharedPreferences = getSharedPreferences("account", Context.MODE_PRIVATE);
+                            sharedPreferences.edit().putString("userid", editTextUsername.getText().toString().trim()).commit();
+                            sharedPreferences.edit().putString("password", editTextPassword.getText().toString().trim()).commit();
+
                             startActivity(new Intent(Login.this, Main.class));
                         }else if(response.trim().equals("error")){
                             textResult.setText("계정의 정보가 안 맞습니다!");

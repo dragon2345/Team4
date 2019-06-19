@@ -17,7 +17,9 @@ import com.example.dragon.team4_project.R;
 
 import java.util.ArrayList;
 
+
 // Doc du lieu nhan duoc ra banner
+
 public class BannerAdapter extends PagerAdapter {
     Context context;
     ArrayList<Question> arrayListbanner;

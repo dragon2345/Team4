@@ -19,7 +19,7 @@
 
 
         <fragment
-            android:name="com.example.dragon.team4_project.Fragment.Fragment_List"
+            android:name="com.example.dragon.team4_project.Fragment.Fragment_Play_List"
             android:id="@+id/fragmentlist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

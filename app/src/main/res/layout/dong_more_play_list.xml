@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_margin="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageviewmoreplaylist"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop"
+            android:layout_width="180dp"
+            android:layout_height="180dp" />
+    </FrameLayout>
+
+    <TextView
+        android:textColor="#413532"
+        android:textSize="20sp"
+        android:text="장르 이름"
+        android:gravity="left"
+        android:maxWidth="200dp"
+        android:lines="2"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:id="@+id/textviewmoreplaylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

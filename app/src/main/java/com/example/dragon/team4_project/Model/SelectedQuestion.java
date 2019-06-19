@@ -1,9 +1,14 @@
 package com.example.dragon.team4_project.Model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class SelectedQuestion {
+import java.io.Serializable;
+
+public class SelectedQuestion implements Parcelable {
 
     @SerializedName("Questionid")
     @Expose
@@ -29,6 +34,34 @@ public class SelectedQuestion {
     @SerializedName("Picture")
     @Expose
     private String picture;
+
+    @SerializedName("Islike")
+    @Expose
+    private String islike;
+
+    protected SelectedQuestion(Parcel in) {
+        questionid = in.readString();
+        title = in.readString();
+        questtioncontent = in.readString();
+        listid = in.readString();
+        link = in.readString();
+        likenumber = in.readString();
+        userid = in.readString();
+        picture = in.readString();
+        islike = in.readString();
+    }
+
+    public static final Creator<SelectedQuestion> CREATOR = new Creator<SelectedQuestion>() {
+        @Override
+        public SelectedQuestion createFromParcel(Parcel in) {
+            return new SelectedQuestion(in);
+        }
+
+        @Override
+        public SelectedQuestion[] newArray(int size) {
+            return new SelectedQuestion[size];
+        }
+    };
 
     public String getQuestionid() {
         return questionid;
@@ -94,4 +127,29 @@ public class SelectedQuestion {
         this.picture = picture;
     }
 
+    public String getIslike() {
+        return islike;
+    }
+
+    public void setIslike(String islike) {
+        this.islike = islike;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(questionid);
+        dest.writeString(title);
+        dest.writeString(questtioncontent);
+        dest.writeString(listid);
+        dest.writeString(link);
+        dest.writeString(likenumber);
+        dest.writeString(userid);
+        dest.writeString(picture);
+        dest.writeString(islike);
+    }
 }

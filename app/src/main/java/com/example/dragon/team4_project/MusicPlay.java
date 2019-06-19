@@ -1,28 +1,35 @@
 package com.example.dragon.team4_project;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.example.dragon.team4_project.Activity.CommentActivity;
+import com.example.dragon.team4_project.Model.SelectedQuestion;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class MusicPlay extends AppCompatActivity {
+    Toolbar toolbar;
     TextView txtTitle , txtTimeNow, txtTimetotal;
     SeekBar skSong;
     ImageButton btnPrev, btnPlay, btnReplay, btnNext;
+    ImageButton btnComment;
     ImageView imageView;
 
     public static final String KOREAN_FONT_2 = "font/koreanfont2.TTF";
@@ -81,6 +88,9 @@ public class MusicPlay extends AppCompatActivity {
                 position++;
                 if(position >arraySong.size() - 1 ){
                     position = 0;
+                    // stop when finish song
+                    // mediaPlayer.stop();
+                    // mediaPlayer.release();
                 }
                 if(mediaPlayer.isPlaying()){
                     mediaPlayer.stop();
@@ -151,9 +161,40 @@ public class MusicPlay extends AppCompatActivity {
 
     private void AddSong() {
         arraySong = new ArrayList<>();
-        arraySong.add(new Song("Stay", "http://203.234.62.86/MusicApp/Stay.mp3"));
-        arraySong.add(new Song("불장난", "http://203.234.62.86/MusicApp/Playingwithfire.mp3"));
-        arraySong.add(new Song("봄바야", "http://203.234.62.86/MusicApp/Boombayah.mp3"));
+        arraySong.clear();
+        Intent intent = getIntent();
+        if(intent !=null){
+            if(intent.hasExtra("question")){
+                final SelectedQuestion question = intent.getParcelableExtra("question");
+                arraySong.add(new Song(question.getTitle() , question.getLink()));
+                btnComment.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent1 = new Intent(MusicPlay.this, CommentActivity.class);
+                        intent1.putExtra("question", question);
+                        startActivity(intent1);
+                    }
+                });
+            }
+            if(intent.hasExtra("questionarraylist")){
+                final ArrayList<SelectedQuestion> arrayList = intent.getParcelableArrayListExtra("questionarraylist");
+                //SelectedQuestion question = intent.getParcelableExtra("question");
+                //arraySong.add(new Song(question.getTitle() , question.getLink()));
+
+                for (int i=0; i<arrayList.size(); i++){
+                    arraySong.add(new Song(arrayList.get(i).getTitle() , arrayList.get(i).getLink()));
+                }
+
+                btnComment.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent1 = new Intent(MusicPlay.this, CommentActivity.class);
+                        intent1.putExtra("question", arrayList.get(position));
+                        startActivity(intent1);
+                    }
+                });
+            }
+        }
     }
 
     private void findViewById(){
@@ -168,12 +209,29 @@ public class MusicPlay extends AppCompatActivity {
         btnReplay = findViewById(R.id.buttonReplay);
         btnNext = findViewById(R.id.buttonNext);
 
+        btnComment = findViewById(R.id.buttonComment);
+
         imageView = findViewById(R.id.imageView);
+
+        toolbar = findViewById(R.id.toolbarmusicplay);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mediaPlayer.isPlaying()){
+                    mediaPlayer.stop();
+                }
+                finish();
+            }
+        });
+
     }
 
     private void setTypeface() {
         Typeface typeface2 = Typeface.createFromAsset(getAssets(), KOREAN_FONT_2);
-        txtTitle.setTypeface(typeface2);
+        //txtTitle.setTypeface(typeface2);
     }
 
     private void LoadMusic(){
@@ -204,10 +262,16 @@ public class MusicPlay extends AppCompatActivity {
                 SimpleDateFormat setTimeNow = new SimpleDateFormat("mm:ss");
                 txtTimeNow.setText(setTimeNow.format(mediaPlayer.getCurrentPosition()));
 
+                if(mediaPlayer.getCurrentPosition() == mediaPlayer.getDuration()){
+                    imageView.clearAnimation();
+                    btnPlay.setImageResource(R.drawable.play);
+                }
+
                 // update cho seekbar
                 skSong.setProgress(mediaPlayer.getCurrentPosition());
 
                 // kiểm tra thời gian bài hát -> nếu kết thúc thì next bài mới
+                /*
                 mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
@@ -233,6 +297,7 @@ public class MusicPlay extends AppCompatActivity {
                         });
                     }
                 });
+                */
 
                 handler.postDelayed(this,500);
             }

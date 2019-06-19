@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imageviewdongsearchquestion"
+        android:scaleType="fitXY"
+        android:layout_margin="5dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+    <TextView
+        android:id="@+id/textviewsearchquestiontitle"
+        android:textSize="20sp"
+        android:text="Name"
+        android:layout_toRightOf="@id/imageviewdongsearchquestion"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="5dp"
+        android:maxWidth="250dp"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:textColor="#663c1c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/textviewsearchquestioncontent"
+        android:textSize="18sp"
+        android:text="Content"
+        android:layout_below="@id/textviewsearchquestiontitle"
+        android:layout_toRightOf="@id/imageviewdongsearchquestion"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="5dp"
+        android:maxWidth="250dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#896448"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textviewsearchquestionusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:maxWidth="250dp"
+        android:singleLine="true"
+        android:text="Username"
+        android:textColor="#896448"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

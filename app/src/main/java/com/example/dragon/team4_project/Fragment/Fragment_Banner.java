@@ -1,5 +1,6 @@
 package com.example.dragon.team4_project.Fragment;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -39,20 +40,26 @@ public class Fragment_Banner extends Fragment {
     // bien thiet lap chi so theo tung pager
     int currentItem;
 
+    public static final String KOREAN_FONT = "font/koreanfont1.TTF";
+    public static final String KOREAN_FONT_2 = "font/koreanfont2.TTF";
+    public static final String ENGLISH_FONT = "font/englishfont1.TTF";
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_banner,container, false);
         findId();
+
         getData();
         return view;
-        
     }
 
     private void findId() {
         viewPager = view.findViewById(R.id.viewpager);
         circleIndicator = view.findViewById(R.id.indicatordefault);
     }
+
+
 
     // lay du lieu de gan vao banner
     private void getData() {

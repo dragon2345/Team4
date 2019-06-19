@@ -1,5 +1,7 @@
 package com.example.dragon.team4_project.Fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.dragon.team4_project.Adapter.LikedQuestionAdapter;
 import com.example.dragon.team4_project.Model.LikedQuestion;
@@ -38,19 +41,21 @@ public class Fragment_Liked_Question extends Fragment{
     RecyclerView recyclerView ;
 
     LikedQuestionAdapter likedQuestionAdapter;
+    SharedPreferences sharedPreferences;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_liked_question, container, false);
         recyclerView = view.findViewById(R.id.recyclerviewlikedquestion);
+        sharedPreferences = getActivity().getSharedPreferences("account", Context.MODE_PRIVATE);
         GetData();
         return view;
     }
 
     private void GetData() {
         Dataservice dataservice = APIService.getService();
-        Call<List<LikedQuestion>> callback = dataservice.GetLikedQuestion();
+        Call<List<LikedQuestion>> callback = dataservice.GetLikedQuestion(sharedPreferences.getString("userid",""));
         callback.enqueue(new Callback<List<LikedQuestion>>() {
             @Override
             public void onResponse(Call<List<LikedQuestion>> call, Response<List<LikedQuestion>> response) {
@@ -61,8 +66,6 @@ public class Fragment_Liked_Question extends Fragment{
                 linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
                 recyclerView.setLayoutManager(linearLayoutManager);
                 recyclerView.setAdapter(likedQuestionAdapter);
-
-
             }
 
             @Override

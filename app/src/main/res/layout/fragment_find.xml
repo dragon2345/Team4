@@ -1,8 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#a5cdd4">
+    android:background="#dad0c5">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayoutsearchquestion"
+        android:background="#cf9a68"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarsearchquestion"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerviewsearchquestion"
+        android:layout_below="@id/appbarlayoutsearchquestion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/textviewsearchquesiton"
+        android:visibility="gone"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:textColor="#af3a17"
+        android:text="검색 정보가 없습니다!"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

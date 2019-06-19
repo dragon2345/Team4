@@ -1,56 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:background="#ede8e2"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginRight="60dp"
+    android:background="@drawable/comment_type"
     android:elevation="5dp">
     <RelativeLayout
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
+            android:id="@+id/textviewcommentindex"
             android:layout_margin="15dp"
             android:textSize="25sp"
             android:text="1"
             android:textStyle="bold"
             android:textColor="#c98b5c"
-            android:id="@+id/textviewquestionindex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
-            android:id="@+id/textviewtitlequestion"
+            android:id="@+id/textviewusernamecomment"
             android:layout_marginLeft="5dp"
             android:text="이름"
             android:textSize="20sp"
             android:ellipsize="end"
-            android:layout_toRightOf="@id/textviewquestionindex"
+            android:layout_toRightOf="@id/textviewcommentindex"
             android:textColor="#b65f3f"
             android:singleLine="true"
             android:maxWidth="250dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            android:id="@+id/textviewcontentcomment"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:id="@+id/textviewcontentquestion"
+            android:layout_marginLeft="15dp"
             android:text="응엔비에트흥"
             android:textSize="15sp"
             android:ellipsize="end"
-            android:layout_toRightOf="@id/textviewquestionindex"
-            android:layout_below="@id/textviewtitlequestion"
+            android:layout_toRightOf="@id/textviewcommentindex"
+            android:layout_below="@id/textviewusernamecomment"
             android:textColor="#766565"
             android:maxWidth="250dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <ImageView
-            android:layout_marginRight="5dp"
-            android:src="@drawable/iconlove"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:id="@+id/imageviewlikenumberquestion"
-            android:layout_width="30dp"
-            android:layout_height="30dp" />
     </RelativeLayout>
-</android.support.v7.widget.CardView>
+</LinearLayout>

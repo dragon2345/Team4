@@ -3,7 +3,9 @@ package com.example.dragon.team4_project.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class LikedQuestion {
+import java.io.Serializable;
+
+public class LikedQuestion implements Serializable {
 
 @SerializedName("Questionid")
 @Expose
@@ -23,6 +25,10 @@ private String userid;
 @SerializedName("Username")
 @Expose
 private String username;
+
+@SerializedName("Islike")
+@Expose
+private String islike;
 
 public String getQuestionid() {
 return questionid;
@@ -70,6 +76,14 @@ return username;
 
 public void setUsername(String username) {
 this.username = username;
+}
+
+public String getIslike() {
+    return islike;
+}
+
+public void setIslike(String islike) {
+    this.islike = islike;
 }
 
 }

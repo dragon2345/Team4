@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
     tools:context=".MusicPlay">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarmusicplay"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
 
+    </android.support.v7.widget.Toolbar>
     <TextView
         android:id="@+id/textViewTitle"
         android:gravity="center"
         android:padding="10dp"
-        android:textSize="35sp"
-        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#4c77d6"
         android:text="노래 이름"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="50dp"/>
 
     <TextView
         android:id="@+id/textViewTimeNow"
@@ -107,20 +114,20 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
             android:layout_marginTop="20dp"
             app:srcCompat="@drawable/cdmusic" />
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/buttonList"
+        android:id="@+id/buttonComment"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="45dp"
         android:background="@null"
         android:src="@drawable/more" />
 
